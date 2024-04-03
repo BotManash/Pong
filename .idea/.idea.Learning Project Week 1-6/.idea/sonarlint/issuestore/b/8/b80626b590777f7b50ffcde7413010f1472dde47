@@ -1,0 +1,5 @@
+
+csharpsquid:S3060:"kOffload the code that's conditional on this type test to the appropriate subclass and remove the condition.(Ú¸æ´şÿÿÿÿ
+ˆcsharpsquid:S3060I"kOffload the code that's conditional on this type test to the appropriate subclass and remove the condition.(œÀòÑ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(É©Ì¦ùÿÿÿÿ
+fcsharpsquid:S1104"DMake this field 'private' and encapsulate it in a 'public' property.(€¹Ê¾şÿÿÿÿ
