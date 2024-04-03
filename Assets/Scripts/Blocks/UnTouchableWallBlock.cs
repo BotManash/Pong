@@ -1,19 +1,16 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using Scripts.GameLoop;
-using Scripts.Global;
 using UnityEngine;
 
 namespace Scripts.Blocks
 {
-    public class WallBlock : MonoBehaviour
+    public class UnTouchableWallBlock :Block
     {
         private GamePlayState GamePlayState => GetComponentInParent<GamePlayState>();
-        private void OnTriggerEnter2D(Collider2D other)
+        protected override void OnTrigger(Collider2D other)
         {
-            if (!other.CompareTag(ConstantKey.Ball))
-            {
-                return;
-            }
             GamePlayState.OnGameFailed();
             TimeScaleGameState.GetInstance.OnLevelFailed();
         }

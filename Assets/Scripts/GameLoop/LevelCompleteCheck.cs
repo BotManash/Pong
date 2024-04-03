@@ -8,7 +8,7 @@ namespace Scripts.GameLoop
     public class LevelCompleteCheck : MonoBehaviour
     {
         [SerializeField] private GamePlayState gamePlayState;
-        [SerializeField] private List<BlockHit> currentBlocks;
+        [SerializeField] private List<BlockHitModule> currentBlocks;
 
         [SerializeField] private bool hasCompletedLevel;
         private Coroutine _cCheckLevelCompleteConditionRoutine;
@@ -36,8 +36,8 @@ namespace Scripts.GameLoop
 
         private void GetCurrentLevelBlocks()
         {
-            currentBlocks = new List<BlockHit>();
-            var foundBlock = FindObjectsOfType<BlockHit>();
+            currentBlocks = new List<BlockHitModule>();
+            var foundBlock = FindObjectsOfType<BlockHitModule>();
             for (var i = 0; i < foundBlock.Length; i++)
             {
                 currentBlocks.Add(foundBlock[i]);
