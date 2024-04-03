@@ -21,13 +21,23 @@ namespace Scripts.GameLoop
 
         public void OnGameComplete()
         {
-            var nextLevel = PlayerPrefs.GetInt(ConstantKey.SelectedLevelIndex) + 1;
+            levelCompleteUI.SetActive(true);
+            SaveCompleteLevelIndex();
+            
+        }
+
+        private void SaveCompleteLevelIndex()
+        {
+            var nextLevel = PlayerPrefs.GetInt(ConstantKey.SelectedLevelIndex) + 1; //currently playing level +1 
+            if (nextLevel < PlayerPrefs.GetInt(ConstantKey.CurrentUnlockedLevel)) // greater than levels that has been already unlocked
+            {
+                return; 
+            }
             if (maxLevelNumber >= nextLevel)
             {
                 PlayerPrefs.SetInt(ConstantKey.CurrentUnlockedLevel,nextLevel);
                 Debug.Log(PlayerPrefs.GetInt(ConstantKey.CurrentUnlockedLevel));
             }
-            levelCompleteUI.SetActive(true);
         }
 
         public void OnGameFailed()
