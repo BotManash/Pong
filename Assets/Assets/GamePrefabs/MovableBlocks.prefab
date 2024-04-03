@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3059654156137254662}
   - component: {fileID: 7497543220033297965}
   - component: {fileID: 6817912985876638349}
+  - component: {fileID: -1118177752045913818}
   m_Layer: 0
-  m_Name: Blocks
+  m_Name: MovableBlocks
   m_TagString: Blocks
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +92,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b946f51cd7ef33419883f514ee82431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 2
+--- !u!114 &-1118177752045913818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193518431065729555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f5e0887c6c540238dd61802e9a520b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockName: MovableBlocks
+  minMaxPos: 4
 --- !u!1 &5900222956870931858
 GameObject:
   m_ObjectHideFlags: 0
